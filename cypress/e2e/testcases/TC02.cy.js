@@ -1,4 +1,4 @@
-describe('Cypress demo', ()=>{
+describe('Cypress - online shoping', ()=>{
     
     it('User wants to buy a items in online shop',()=>{
         cy.visit('https://www.saucedemo.com/') 
