@@ -7,4 +7,6 @@ module.exports = defineConfig({
     },
   },
   chromeWebSecurity: false,
+  waitForAnimations: false,
+  
 });

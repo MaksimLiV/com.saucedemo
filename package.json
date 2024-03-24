@@ -8,8 +8,10 @@
   "author": "Maksim Li",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "cypress": "^13.7.0",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "typescript": "^5.4.3"
   },
   "dependencies": {
     "aggregate-error": "^3.1.0",
