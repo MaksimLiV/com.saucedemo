@@ -80,6 +80,42 @@ describe('cypress test on sample banking application', () => {
         // Get the account numbers and split into a list
         cy.get("@accountDisplayed").then($accounts => {
             let accountsList = $accounts.toString().split(' ');
+            cy.log("First Account Number::"+accountsList[0]);
+            cy.log("Second Account Number::"+accountsList[1]);
+            cy.log("Third Account Number::"+accountsList[2]);
         });
+
+            // Log in as a user 
+            cy.xpath('//button[.="Home"]').click();
+            cy.xpath('//button[.="Customer Login"]').click();
+            cy.get('#userSelect').select(customerFullName);
+            cy.xpath('//button[.="Login"]').click();
+
+            //Deposit Dollars 
+            cy.xpath('//*[@ng-class="btnClass2"]').click();
+            cy.xpath('//*[@ng-model="amount"]').type('500');
+            cy.xpath('//button[text()="Deposit"]').click();
+            cy.xpath('//*[@ng-show="message"]')
+            .should('be.visible')
+            .and('have.text', 'Deposit Successful');
+        
+           //Withdrawl currect amount   
+           cy.xpath('//*[@ng-class="btnClass3"]').click();
+           cy.wait(1000)
+           cy.xpath('//*[@ng-model="amount"]').type('100');
+           cy.xpath('//button[text()="Withdraw"]').click(); 
+           cy.xpath('//*[@ng-show="message"]')
+            .should('be.visible')
+            .and('have.text', 'Transaction successful'); 
+
+            //Withdrawl wrong amount   
+            cy.xpath('//*[@ng-class="btnClass3"]').click();
+            cy.wait(1000)
+            cy.xpath('//*[@ng-model="amount"]').type('500');
+            cy.xpath('//button[text()="Withdraw"]').click(); 
+            cy.xpath('//*[@ng-show="message"]')
+            .should('be.visible')
+            .and('have.text', 'Transaction Failed. You can not withdraw amount more than the balance.'); 
+
     });
 });
