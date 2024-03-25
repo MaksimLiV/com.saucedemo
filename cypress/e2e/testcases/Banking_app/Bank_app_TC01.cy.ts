@@ -1,7 +1,6 @@
 import 'cypress-xpath'
 import {faker} from '@faker-js/faker'
 
-
 /// <reference types="cypress" />
 
 describe('cypress test on sample banking application', () => {
@@ -100,22 +99,22 @@ describe('cypress test on sample banking application', () => {
             .and('have.text', 'Deposit Successful');
         
            //Withdrawl currect amount   
-           cy.xpath('//*[@ng-class="btnClass3"]').click();
-           cy.wait(1000)
-           cy.xpath('//*[@ng-model="amount"]').type('100');
-           cy.xpath('//button[text()="Withdraw"]').click(); 
-           cy.xpath('//*[@ng-show="message"]')
+            cy.xpath('//*[@ng-class="btnClass3"]').first().click();
+            cy.wait(1000)
+            cy.xpath('//*[@ng-model="amount"]').first().type('100');
+            cy.xpath('//button[text()="Withdraw"]').first().click(); 
+            cy.xpath('//*[@ng-show="message"]') 
             .should('be.visible')
             .and('have.text', 'Transaction successful'); 
 
-            //Withdrawl wrong amount   
-            cy.xpath('//*[@ng-class="btnClass3"]').click();
+            // Withdrawal of wrong amount   
+            cy.xpath('//*[@ng-class="btnClass3"]').last().click();
             cy.wait(1000)
-            cy.xpath('//*[@ng-model="amount"]').type('500');
-            cy.xpath('//button[text()="Withdraw"]').click(); 
+            cy.xpath('//*[@ng-model="amount"]').last().type('500');
+            cy.xpath('//button[text()="Withdraw"]').last().click(); 
             cy.xpath('//*[@ng-show="message"]')
-            .should('be.visible')
-            .and('have.text', 'Transaction Failed. You can not withdraw amount more than the balance.'); 
+                .should('be.visible')
+                .and('have.text', 'Transaction Failed. You can not withdraw amount more than the balance.'); 
 
     });
 });
