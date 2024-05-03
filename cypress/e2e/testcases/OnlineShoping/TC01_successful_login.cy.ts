@@ -11,13 +11,13 @@ describe('As a user, I want to purchase items through online shopping', ()=>{
 
         //User try to buy Backpack
         cy.contains('Sauce Labs Backpack').click()
-        cy.get('#add-to-cart-sauce-labs-backpack').click()
+        cy.xpath('//button[text()="Add to cart"]').click();
         cy.get('#back-to-products').click()
         
         // user try to cansel purchase 
         cy.get('#add-to-cart-sauce-labs-bike-light').click() 
         cy.contains('Sauce Labs Bike Light').click()
-        cy.get('#remove-sauce-labs-bike-light').click()
+        cy.xpath('//button[text()="Remove"]').click()
         cy.get('#back-to-products').click()
 
 
