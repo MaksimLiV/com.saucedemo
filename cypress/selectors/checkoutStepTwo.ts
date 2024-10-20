@@ -1,0 +1,15 @@
+export const checkoutStepTwo = {
+    summaryTitle: '.title',
+    itemSummary: '.inventory_item_name',
+    itemDesc: '.inventory_item_desc',
+    itemPrice: '.inventory_item_price',
+    paymentInfo: '.summary_info',
+    paymentInfoText: '[data-test="payment-info-value"]',
+    shippingInfo: '.summary_info',
+    shippingInfoText: '[data-test="shipping-info-value"]',
+    subtotalLabel: '[data-test="total-info-label"]',
+    subtotalLabelText: '.summary_subtotal_label[data-test="subtotal-label"]',
+    taxLabel: '.summary_tax_label',
+    totalLabel: '.summary_total_label',
+    finishButton: 'Finish',
+};

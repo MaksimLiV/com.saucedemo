@@ -1,0 +1,42 @@
+{
+    "cartPage": {
+      "cartTitleValue": "Your Cart",
+      "cartItemNameValue": "Sauce Labs Bolt T-Shirt",
+      "cartDescValue": "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.",
+      "cartItemPriceValue": "$15.99",
+      "cartQuantityValue": "1"
+    },
+    "orderSummaryPage": {
+      "summaryTitleValue": "Checkout: Overview",
+      "itemSummaryValue": "Sauce Labs Bolt T-Shirt",
+      "itemDescValue": "Get your testing superhero on with the Sauce Labs bolt T-shirt",
+      "itemPriceValue": "$15.99",
+      "paymentInfoValiue": "Payment Information:",
+      "paymentInfoTextValue": "SauceCard #31337",
+      "shippingInfoValue": "Shipping Information:",
+      "shippingInfoTextValue": "Free Pony Express Delivery!",
+      "subtotalLabelValue": "Price Total",
+      "subtotalLabelTextValue1": "Item total: $",
+      "subtotalLabelTextValue2": "15.99",
+      "taxLabelValue": "Tax: $1.28",
+      "totalLabelValue": "Total: $17.27"
+    },
+    "checkoutPage": {
+      "checkoutTitleValue": "Checkout: Your Information",
+      "firstNameInputValue": "Maksim",
+      "lastNameInputValue": "Li",
+      "postalCodeInputValue": "LV-1058"
+    },
+    "confirmationPage": {
+      "titleValue": "Checkout: Complete!",
+      "completeHeaderValue": "Thank you for your order!",
+      "completeTextValue": "Your order has been dispatched, and will arrive just as fast as the pony can get there!"
+    },
+    "tShirtPage": {
+      "productName": "Sauce Labs Bolt T-Shirt",
+      "productDesc": "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.",
+      "productPrice1": "$",
+      "productPrice2": "15.99"
+    }
+  }
+  
