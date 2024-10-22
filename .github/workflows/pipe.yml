@@ -19,22 +19,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '21'
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Get credentials
-        id: credentials
-        run: |
-          echo "USERNAME=${{ secrets.USERNAME }}" >> $GITHUB_ENV
-          echo "PASSWORD=${{ secrets.PASSWORD }}" >> $GITHUB_ENV
-
       - name: Run Cypress tests
         run: npm run cypress:run
         env:
-          USERNAME: ${{ env.USERNAME }}  
-          PASSWORD: ${{ env.PASSWORD }}  
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
 
       - name: Upload results
         uses: actions/upload-artifact@v2

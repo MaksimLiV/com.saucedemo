@@ -6,6 +6,10 @@
       "cartItemPriceValue": "$15.99",
       "cartQuantityValue": "1"
     },
+    "loginData": {
+      "username" : "standard_user",
+      "password" : "secret_sauce"
+    },
     "orderSummaryPage": {
       "summaryTitleValue": "Checkout: Overview",
       "itemSummaryValue": "Sauce Labs Bolt T-Shirt",
