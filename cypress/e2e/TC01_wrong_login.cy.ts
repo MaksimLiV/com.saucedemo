@@ -1,4 +1,4 @@
-import 'cypress-xpath'
+import 'cypress-xpath';
 import { loginPage } from '../selectors/loginPage';
 import { inventory } from '../selectors/inventory';
 import { inventoryItem } from '../selectors/inventoryItem';
@@ -16,18 +16,12 @@ describe('As a user, I want to purchase items through online shopping', () => {
         // Clear cookies and local storage to simulate incognito mode
         cy.clearCookies();
         cy.clearLocalStorage();
-
         // Navigate to the Sauce Labs Sample Application
         cy.visit('https://www.saucedemo.com/');
-        
+
         // Use credentials from environment variables
-        const username: string = Cypress.env('USERNAME') //|| data.loginData.username;
-        const password: string = Cypress.env('PASSWORD') //|| data.loginData.password;
-
-        console.log(typeof username, typeof password);
-
-        cy.log(`Username: ${username}`);
-        cy.log(`Password: ${password}`);
+        const username = Cypress.env('USERNAME') || data.loginData.username;
+        const password = Cypress.env('PASSWORD') || data.loginData.password;
         
         // Enter valid credentials to log in
         cy.get(loginPage.usernameInput).type(username);
