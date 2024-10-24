@@ -29,7 +29,7 @@ jobs:
         run: |
           echo "USERNAME=${{ secrets.USERNAME }}" >> $GITHUB_ENV
           echo "PASSWORD=${{ secrets.PASSWORD }}" >> $GITHUB_ENV
-
+       
       - name: Cache Cypress binary
         uses: actions/cache@v3
         with:
@@ -43,9 +43,10 @@ jobs:
 
       - name: Run Cypress tests
         run: npx cypress run
+       
         env:
-          USERNAME: ${{ env.USERNAME }}  
-          PASSWORD: ${{ env.PASSWORD }}  
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
 
       - name: Upload results
         uses: actions/upload-artifact@v3

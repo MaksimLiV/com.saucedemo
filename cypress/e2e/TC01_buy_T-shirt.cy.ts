@@ -20,8 +20,8 @@ describe('As a user, I want to purchase items through online shopping', () => {
         cy.visit('https://www.saucedemo.com/');
 
         // Use credentials from environment variables
-        const username = Cypress.env('USERNAME') || data.loginData.username;
-        const password = Cypress.env('PASSWORD') || data.loginData.password;
+        const username = Cypress.env('USERNAME') //|| data.loginData.username;
+        const password = Cypress.env('PASSWORD') //|| data.loginData.password;
         
         // Enter valid credentials to log in
         cy.get(loginPage.usernameInput).type(username);
@@ -44,7 +44,7 @@ describe('As a user, I want to purchase items through online shopping', () => {
         cy.xpath(inventoryItem.addToCartButton).should('be.visible').click();
 
         // Verify that the T-shirt is added to the cart successfully
-        cy.get('.shopping_cart_badge').should('contain', '1'); // Verify cart icon shows 1 item
+        cy.get(cart.shoppingCartButton).should('contain', '1'); // Verify cart icon shows 1 item
         cy.log('T-shirt is added to the cart successfully');
         
 

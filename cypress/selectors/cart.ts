@@ -6,4 +6,5 @@ export const cart = {
     cartItemPrice: '.inventory_item_price',
     cartQuantity: '.cart_quantity',
     checkoutButton: '//*[@id="checkout"]',
+    shoppingCartButton: '.shopping_cart_badge'
 };
