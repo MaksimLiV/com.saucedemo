@@ -12,6 +12,9 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
+    env:
+      TERM: xterm
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
