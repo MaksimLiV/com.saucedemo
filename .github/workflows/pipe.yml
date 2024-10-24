@@ -12,9 +12,6 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
-    env:
-      TERM: xterm
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -32,7 +29,7 @@ jobs:
         run: |
           echo "USERNAME=${{ secrets.USERNAME }}" >> $GITHUB_ENV
           echo "PASSWORD=${{ secrets.PASSWORD }}" >> $GITHUB_ENV
-       
+
       - name: Cache Cypress binary
         uses: actions/cache@v3
         with:
@@ -46,10 +43,9 @@ jobs:
 
       - name: Run Cypress tests
         run: npx cypress run
-       
         env:
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+          USERNAME: ${{ env.USERNAME }}  
+          PASSWORD: ${{ env.PASSWORD }}  
 
       - name: Upload results
         uses: actions/upload-artifact@v3
