@@ -20,8 +20,8 @@ describe('As a user, I want to purchase items through online shopping', () => {
         cy.visit('https://www.saucedemo.com/');
 
         // Use credentials from environment variables
-        const username = Cypress.env('USERNAME') || data.loginData.username;
-        const password = Cypress.env('PASSWORD') || data.loginData.password;
+        const username = Cypress.env('USERNAME') 
+        const password = Cypress.env('PASSWORD') 
         
         // Enter valid credentials to log in
         cy.get(loginPage.usernameInput).type(username);
