@@ -2,6 +2,8 @@
 
 This project is an automated testing framework for purchasing items from an online shop using Cypress. It simulates the user experience of logging in, selecting items, checking out, and logging out from the application.
 
+Link for test case: https://github.com/MaksimLiV/com.saucedemo/wiki/Test-Case:-Buy-T%E2%80%90shirt
+
 ## Project Structure
 
 The project utilizes the following Cypress selectors for organizing tests:
