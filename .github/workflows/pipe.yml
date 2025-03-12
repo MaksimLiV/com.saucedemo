@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -49,7 +49,7 @@ jobs:
           PASSWORD: ${{ env.PASSWORD }}  
 
       - name: Upload results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-results
           path: cypress
