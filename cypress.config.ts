@@ -1,9 +1,10 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
+    setupNodeEvents(on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) {
       // implement node event listeners here
+      return config;
     },
   },
   chromeWebSecurity: false,
