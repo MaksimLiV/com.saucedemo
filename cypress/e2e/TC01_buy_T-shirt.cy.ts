@@ -1,4 +1,3 @@
-import 'cypress-xpath';
 import { loginPage } from '../selectors/loginPage';
 import { inventory } from '../selectors/inventory';
 import { inventoryItem } from '../selectors/inventoryItem';
